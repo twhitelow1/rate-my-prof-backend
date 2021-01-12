@@ -9,7 +9,13 @@ module.exports = {
       },
       professorId: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Professors',
+          key: 'id',
+          as: 'review',
+        },
       },
       rating: {
         type: Sequelize.INTEGER,
