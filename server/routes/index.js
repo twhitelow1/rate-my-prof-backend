@@ -15,6 +15,6 @@ module.exports = (app) => {
   app.post('/api/professors/:professorId/reviews', reviewsController.create); // Add Review 
   app.get('/api/reviews/:reviewId', reviewsController.retrieve); // Add Review 
   app.put('/api/reviews/:reviewId', reviewsController.update); // Add Review 
-  app.get('/api/reviews', reviewsController.list); // Get all Professors
+  app.get('/api/reviews', reviewsController.list); // Get all Reviews
 
 };
