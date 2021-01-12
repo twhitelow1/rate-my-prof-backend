@@ -57,12 +57,16 @@ module.exports = {
             message: 'Professor Not Found',
           });
         }
-        return professor
+        return Professor
           .update({
             name: req.body.name || professor.name,
             title: req.body.title || professor.title,
             school: req.body.school || professor.school,
             department: req.body.department || professor.department,
+          }, {
+            where: {
+              id: req.params.professorId
+            }
           })
           .then(() => res.status(200).send(professor))  // Send back the updated professor.
           .catch((error) => res.status(400).send(error));
@@ -82,7 +86,7 @@ module.exports = {
             message: 'Professor Not Found',
           });
         }
-        return professor
+        return Professor
           .destroy()
           .then(() => res.status(204).send('Professor successfully deleted'))
           .catch(error => res.status(400).send(error));
