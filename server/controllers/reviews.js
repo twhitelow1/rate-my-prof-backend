@@ -4,7 +4,7 @@ module.exports = {
   create(req, res) {
     return Review
       .create({
-        professorid: req.params.professorId,
+        professorId: req.params.professorId,
         rating: req.body.rating,
         text: req.body.text,
         reviewer: req.body.reviewer,
