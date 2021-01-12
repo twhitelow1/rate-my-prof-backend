@@ -6,4 +6,6 @@ module.exports = (app) => {
   }));
 
   app.post('/api/professors', professorsController.create);
+  app.get('/api/professors', professorsController.list);
+
 };

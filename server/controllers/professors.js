@@ -12,4 +12,10 @@ module.exports = {
       .then(professor => res.status(201).send(professor))
       .catch(error => res.status(400).send(error));
   },
+  list(req, res) {
+    return Professor
+      .findAll()
+      .then(professors => res.status(200).send(professors))
+      .catch(error => res.status(400).send(error));
+  },
 };
