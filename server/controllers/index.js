@@ -1,5 +1,5 @@
-import professors from './professors';
+const professors = require('./professors');
 
-export default {
+module.exports = {
   professors,
 };

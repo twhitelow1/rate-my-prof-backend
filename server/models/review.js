@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Review.associate = (models) => {
     Review.hasMany(models.Professor, {
-      foreignKey: 'professorId',
+      foreignKey: 'id',
       onDelete: 'CASCADE',
     });
   };
