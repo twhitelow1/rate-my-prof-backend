@@ -6,8 +6,11 @@ module.exports = (app) => {
     message: 'Welcome to the Rate My Professor API!',
   }));
 
-  app.post('/api/professors', professorsController.create);
-  app.get('/api/professors', professorsController.list);
+  app.post('/api/professors', professorsController.create); // Add A Professor
+  app.get('/api/professors', professorsController.list); // Get all Professors
+  app.get('/api/professors/:professorId', professorsController.retrieve); // Get Professor by Id
+  app.put('/api/professors/:professorId', professorsController.update);  // Update Professor by Id
+  app.delete('/api/professors/:professorId', professorsController.destroy);  // Delete Professor by Id
 
-  app.post('/api/professors/:professorId/reviews', reviewsController.create);
+  app.post('/api/professors/:professorId/reviews', reviewsController.create); // Add Review 
 };
