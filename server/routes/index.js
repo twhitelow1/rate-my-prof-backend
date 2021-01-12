@@ -13,4 +13,6 @@ module.exports = (app) => {
   app.delete('/api/professors/:professorId', professorsController.destroy);  // Delete Professor by Id
 
   app.post('/api/professors/:professorId/reviews', reviewsController.create); // Add Review 
+  app.get('/api/reviews/:reviewId', reviewsController.retrieve); // Add Review 
+
 };
