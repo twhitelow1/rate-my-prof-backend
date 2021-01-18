@@ -21,7 +21,6 @@ module.exports = (sequelize, DataTypes) => {
   Review.associate = (models) => {
     Review.hasMany(models.Professor, {
       foreignKey: 'id',
-      onDelete: 'CASCADE',
     });
   };
 
