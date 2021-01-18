@@ -7,7 +7,7 @@ module.exports = {
       department: 'Vocals',
       createdAt: new Date(),
       updatedAt: new Date()
-    }], {
+    }, {
       name: 'Jerry Garcia',
       title: 'Lead Professor',
       school: 'School of Rock',
@@ -21,7 +21,7 @@ module.exports = {
       department: 'Guitar',
       createdAt: new Date(),
       updatedAt: new Date()
-    }
+    }]
     );
   },
   down: (queryInterface, Sequelize) => {
